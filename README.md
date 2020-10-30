@@ -8,13 +8,11 @@ Due to the size limitation, please download the entire dataset from [Google Driv
 
 If you want to use TriageSQL in your work, please cite as follows:
 ```
-@misc{zhang2020did,
-      title={Did You Ask a Good Question? A Cross-Domain Question Intention Classification Benchmark for Text-to-SQL}, 
-      author={Yusen Zhang and Xiangyu Dong and Shuaichen Chang and Tao Yu and Peng Shi and Rui Zhang},
-      year={2020},
-      eprint={2010.12634},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{zhang2020did,
+  title={Did You Ask a Good Question? A Cross-Domain Question Intention Classification Benchmark for Text-to-SQL},
+  author={Zhang, Yusen and Dong, Xiangyu and Chang, Shuaichen and Yu, Tao and Shi, Peng and Zhang, Rui},
+  journal={arXiv preprint arXiv:2010.12634},
+  year={2020}
 }
 ```
 
