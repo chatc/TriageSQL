@@ -4,6 +4,8 @@ The dataset and source code for our paper: "Did You Ask a Good Question? A Cross
 # Dataset Download
 Due to the size limitation, please download the entire dataset from [Google Drive](https://drive.google.com/file/d/1BVRu8Qy2yt8UDfONz3_1di3brgzdGGZQ/view?usp=sharing)
 
+The new version of TriageSQL is comming out soon! 
+
 # Citations 
 
 If you want to use TriageSQL in your work, please cite as follows:
