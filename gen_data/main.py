@@ -307,20 +307,29 @@ if __name__ == "__main__":
 
     train_schema, dev_schema, test_schema = splitdataschema(total_schema)
 
+    """out = WikiSQL
 
-    """newschema = {}
-    for key in train_schema[WikiSQL]:
-        newschema[key] = train_schema[WikiSQL][key]['table']
-    mkdir(WikiSQL)
+    newschema = {}
+    for key in train_schema[out]:
+        newschema[key] = train_schema[out][key]['table']
+    mkdir(out)
     write_json(
-        newschema, WikiSQL + "/train.json"
+        newschema, out + "/train.json"
     )
     newschema = {}
-    for key in test_schema[WikiSQL]:
-        newschema[key] = test_schema[WikiSQL][key]['table']
-    mkdir(WikiSQL)
+    for key in test_schema[out]:
+        newschema[key] = test_schema[out][key]['table']
+    mkdir(out)
     write_json(
-        newschema, WikiSQL + "/test.json"
+        newschema, out + "/test.json"
+    )
+
+    newschema = {}
+    for key in dev_schema[out]:
+        newschema[key] = dev_schema[out][key]['table']
+    mkdir(out)
+    write_json(
+        newschema, out + "/dev.json"
     )"""
 
     total_questions = {Spider: spiderquestions,
@@ -443,11 +452,7 @@ if __name__ == "__main__":
     write_json(test_type5, os.path.join(Test, Type5json))
     print("------------------")
 
-    """draw_stat(train_question, 'train')
-    draw_stat(test_question, 'test')
-    draw_stat(dev_question, 'dev')"""
-
-    get_stat(train_question, test_question, dev_question)
+    #get_stat(train_question, test_question, dev_question)
 
     end = time.time()
     print(end - start)

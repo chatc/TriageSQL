@@ -451,7 +451,9 @@ def splitdataschema(total_schema):
             tmp = ""
             tablekeys = sorted(list(tables.keys()))
             for tableid in tablekeys:
+                #tmp = str(sorted(tables[tableid]))
                 tmp += '#'.join(sorted(tables[tableid])).lower().replace("_", " ") + "#"
+            #.replace(" ", "").replace(".", "").replace("*", "")
             value = datasetid + "#" + dbid
             if not value in tmpcolumnsset[tmp]:
                 tmpcolumns[tmp].append(value)
@@ -488,12 +490,13 @@ def splitdataschema(total_schema):
         for term in item:
             datasetid = term.split("#")[0]
             dbid = term.split("#")[1]
+
             if i < trainlen:
-                train_schema[datasetid][dbid] = dbids[dbid]
+                train_schema[datasetid][dbid] = {'table': total_schema[datasetid][dbid][Table], 'column': total_schema[datasetid][dbid][Column]}
             elif i >= trainlen and i < devlen:
-                dev_schema[datasetid][dbid] = dbids[dbid]
+                dev_schema[datasetid][dbid] = {'table': total_schema[datasetid][dbid][Table], 'column': total_schema[datasetid][dbid][Column]}
             elif i >= devlen and i < testlen:
-                test_schema[datasetid][dbid] = dbids[dbid]
+                test_schema[datasetid][dbid] = {'table': total_schema[datasetid][dbid][Table], 'column': total_schema[datasetid][dbid][Column]}
 
     """for datasetid in total_schema:
         dataset = total_schema[datasetid]
@@ -695,13 +698,19 @@ def gen_type1(total_questions, total_schema, total_dataset, total_q):
         if randomkey1 == Dbdomainnotambiguous or randomkey1 == Dbdomainambiguous:
             type1sample.append({Outtype: Type1, Outquestion: question, Outquestiondatasetid: qdataset,
                             Outdatabaseiddatasetid: randomkey2, Outdatabaseid: randomkey2, Outtables: schematable})
-            total_dataset[Type1][randomkey2] += 1
-            total_q[Type1][qdataset] += 1
+            #total_dataset[Type1][randomkey2] += 1
+            #total_q[Type1][qdataset] += 1
         else:
             type1sample.append({Outtype: Type1, Outquestion: question, Outquestiondatasetid: qdataset,
                                 Outdatabaseiddatasetid: randomkey1, Outdatabaseid: randomkey2, Outtables: schematable})
-            total_dataset[Type1][randomkey1] += 1
-            total_q[Type1][qdataset] += 1
+            #total_dataset[Type1][randomkey1] += 1
+            #total_q[Type1][qdataset] += 1
+    type1sample = random.sample(type1sample, int(len(type1sample) / 10))
+    for item in type1sample:
+        datasetid = item[Outdatabaseiddatasetid]
+        qdataset = item[Outquestiondatasetid]
+        total_dataset[Type1][datasetid] += 1
+        total_q[Type1][qdataset] += 1
 
     print("type1: " + str(len(type1sample)))
     return type1sample
