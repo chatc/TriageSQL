@@ -9,9 +9,6 @@ The **new version** of TriageSQL: [Google Drive](https://drive.google.com/drive/
 # Data File
 In each file, there is a field called `type`, which contains 5 different values, including `small talk`, `answerable`, `ambiguous`, `lack data`, and `unanswerable by sql`, corresponding to 5 different types in our paper.
 
-# Experiment Results
-In Progress
-
 # Citations 
 
 If you want to use TriageSQL in your work, please cite as follows:
@@ -23,17 +20,3 @@ If you want to use TriageSQL in your work, please cite as follows:
   year={2020}
 }
 ```
-
-
-Also, the correct citation of the paper, 'Iterative feature mining for constraint-based data collection to increase data diversity and model robustness' in our paper should be:
-```
-@InProceedings{emnlp20taboo,
-  title     = {Iterative Feature Mining for Constraint-Based Data Collection to Increase Data Diversity and Model Robustness},
-  author    = {Larson, Stefan and Zheng, Anthony and Mahendran, Anish and Tekriwal, Rishi and Cheung, Adrian and Guldan, Eric and Leach, Kevin and Kummerfeld, Jonathan K.},
-  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing},
-  month     = {November},
-  year      = {2020},
-  location  = {Online},
-}
-```
-Please note that this is **not** the bibtex of our paper. 
