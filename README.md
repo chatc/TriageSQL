@@ -6,6 +6,12 @@ Due to the size limitation, please download the entire dataset from Google Drive
 
 The **new version** of TriageSQL: [Google Drive](https://drive.google.com/drive/folders/1lbp2cx6jRNg-hT8bTV6HOjG1ZbFDLWeI?usp=sharing) 
 
+# Data File
+In each file, there is a field called `type`, which contains 5 different values, including `small talk`, `answerable`, `ambiguous`, `lack data`, and `unanswerable by sql`, corresponding to 5 different types in our paper.
+
+# Experiment Results
+In Progress
+
 # Citations 
 
 If you want to use TriageSQL in your work, please cite as follows:
