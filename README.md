@@ -1,5 +1,5 @@
 # TriageSQL
-The dataset and source code for our paper: "Did You Ask a Good Question? A Cross-Domain Question Intention Classification Benchmark for Text-to-SQL"
+The dataset and source code for our paper: ["Did You Ask a Good Question? A Cross-Domain Question Intention Classification Benchmark for Text-to-SQL"](https://arxiv.org/abs/2010.12634)
 
 # Dataset Download
 Due to the size limitation, please download the entire dataset from [Google Drive](https://drive.google.com/file/d/1w55CaVEuimUlP-jerOCrVHF1iF0FZYKe/view?usp=sharing).
