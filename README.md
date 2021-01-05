@@ -26,6 +26,7 @@ The same as `/testset/test.json`, it is a list with shape (num_of_question, 3) c
 - query: containing strings of questions
 - schema: contianing strings of schema for each question, i.e., "table_name.column_name1 | table_name.column_name2 | ... " for multi-table questions, and column_name1 | column_name2 for single-table questions.
 - labels of questions, see config.label_dict for the mapping, leave arbitary value if testing is not needed or true labels are not given.
+
 **when conducting preprocessing, please use lower case for all data, and remove the meaningless table names as well, such as T10023-1242. Also, the downloadable dataset sample 10k from each type to form the large input dataset**
 
 ## Running
