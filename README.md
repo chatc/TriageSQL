@@ -44,7 +44,7 @@ The same as `/testset/test.json`, our input file is a json list with shape (num_
 ## Running
 After adjusting the parameters in `config.py`, one can simply run `python train.py` or `python eval.py` to train or evaluate the model.
 
-## other file explanation
+## Explanation of other files
 - config.py: hyper parameters
 - train.py: training and evaluation of the model
 - utils.py: loading the dataset and tokenization
